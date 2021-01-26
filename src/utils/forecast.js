@@ -24,7 +24,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if(body.cod == 400) {
             callback('Unable to find location', undefined);
         } else {
-            callback(undefined, 'It is currently ' + body.main.temp + ' out there. Air humidity is ' + body.main.humidity + '.');
+            callback(undefined, 'It is currently ' + body.main.temp + ' out there; feels like ' + body.main.feels_like + '. Air humidity is ' + body.main.humidity + '.');
         }
     })
     
